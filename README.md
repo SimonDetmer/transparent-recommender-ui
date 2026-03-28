@@ -1,12 +1,15 @@
-# Transparent Recommender UI
+# Appendix Materials – Transparent Recommender UI
 
 This repository contains supplementary materials for a bachelor thesis on user interfaces for explainable and trustworthy recommender systems.
 
 ## Contents
 
-- Appendix materials (qualitative data, test scenarios)
 - Prompt documentation (Figma Make)
+- Test scenario and task descriptions
+- Qualitative raw data
+- Heuristic evaluation framework
+- Expert review results
 
-## Context
+## Note
 
-The project explores how layered explanations and interactive controls influence user understanding, trust, and perceived control in algorithmic recommendation systems.
+The materials are provided as supplementary appendix content and are referenced within the thesis.
