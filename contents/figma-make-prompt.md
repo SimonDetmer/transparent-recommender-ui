@@ -1,11 +1,14 @@
 # Anhang A: Promptverlauf – Prototypentwicklung mit Figma Make
 
 ## Kontext
-Im Rahmen der Prototypentwicklung wurde ein KI-gestützter Generierungsprozess (Figma Make) eingesetzt. Der folgende Promptverlauf dokumentiert exemplarisch die schrittweise Entwicklung der Benutzeroberfläche.
+Der folgende Promptverlauf dokumentiert vollständig die iterative Entwicklung eines UX-Prototyps mithilfe eines KI-gestützten Generierungsprozesses (Figma Make).  
+Die Interaktion erfolgte dialogbasiert und umfasst mehrere Iterationen zur Gestaltung transparenter und erklärbarer UI-Elemente.
 
 ---
 
-### Initialer Prompt
+## Promptverlauf
+
+### Initiale Generierung
 
 **User:**  
 Create a mobile workflow from scratch with a section for recommended videos
@@ -22,119 +25,162 @@ You could enhance this by:
 
 ---
 
-### Transparenzfunktion (Info-Button)
+### Einführung eines Transparenz-Features
 
 **User:**  
-Perfect. In the next step, I need a button or tooltip near the section "Recommended Videos" that explains why the videos are recommended.
+Perfect. In the next Step, I need a button or a tool tip near the section "Reccommende Videos" that opens a section that displays information about why the videos are recommended
 
 **System:**  
-An info button (ℹ️) was added next to "Recommended Videos", opening a modal with explanations (e.g. Watch History, Engagement Patterns, etc.).
+Perfect! I've added an info button (ℹ️ icon) next to the "Recommended Videos" heading that opens a detailed modal explaining why videos are recommended. The modal slides up from the bottom and displays five key factors: Watch History, Trending Content, Engagement Patterns, View Duration, and Community Preferences, each with icons and descriptions. Users can close the modal by tapping the backdrop or the X button.
 
 ---
 
-### Layered Explanations
+### Einführung von Layered Explanations
 
 **User:**  
-The dialog should offer multiple layers of explanation:
-- Layer 1: Short explanation  
-- Layer 2: Detailed explanation  
-- Layer 3: Statistics / visualizations  
-- Layer 4: Feedback and controls  
+Ok, great. The dialog that opens per info-button shall offer different layers of explanation.  
+Layer1 = short explanation why do i see the information.  
+Layer 2 = Detailed Explanation.  
+Layer 3 = Extended - with visualizations/statistics.  
+Layer 4 = Feedback and Controls - eg a settings screen with different options to adjust the behavior
 
 **System:**  
-A multi-layered explanation system was implemented with progressive disclosure and navigation between layers.
+Perfect! I've transformed the info dialog into a multi-layered experience with 4 distinct levels.  
+Layer 1 provides a brief overview explaining why this information exists,  
+Layer 2 offers detailed explanations of each recommendation factor,  
+Layer 3 displays visual statistics with progress bars and metrics,  
+Layer 4 presents interactive controls with toggle switches to customize feed preferences.  
+
+Users can navigate between layers using the tab icons at the top or the Previous/Next buttons at the bottom, with progress indicators showing their current position.
 
 ---
 
-### Hierarchische Struktur statt Tabs
+### Anpassung der Struktur (keine Tabs)
 
 **User:**  
-Make it feel like layers, not tabs.
+can we try to let it look like different layers not like equivalent tabs.
 
 **System:**  
-The interface was redesigned with:
-- "Layer X of 4" indicator  
-- Progress bar  
-- Depth indicator  
-- "Dive deeper" interaction  
+Perfect! I've redesigned the interface to emphasize a hierarchical layer structure rather than equivalent tabs.  
+Now it shows "Layer X of 4" with the current layer title and subtitle, a horizontal progress bar, a depth indicator line, a "Dive Deeper" button, and a breadcrumb trail.  
+The navigation feels like descending through levels instead of switching tabs.
 
 ---
 
-### Erweiterung: Statistiken & Kontrolle
+### Erweiterung von Statistik- und Kontrollfunktionen
 
 **User:**  
-Add:
-- "Top Categories" (tags)  
-- "Viewer Community"  
-- Sliders for personalization  
-- Buttons to reset preferences  
+Please add in "Statistics and Data":
+- "Top Categories" with tags  
+- Viewer Community with global user reference  
+
+Please add inside Settings and Controls:
+- slider for Personalization Level and Content diversity  
+- buttons for clearing history, resetting profile and disabling personalization  
+- change language to German  
 
 **System:**  
-All elements were implemented, including sliders and control actions.
+Perfekt! Ich habe alle gewünschten Änderungen vorgenommen:
 
----
+**Statistiken & Daten (Ebene 3):**
+- „Top-Kategorien“ (z. B. Technologie, Kochen, Fitness, Reisen)  
+- „Zuschauer-Community“ mit globalen Nutzungsdaten  
 
-### Lokalisierung (Deutsch)
+**Einstellungen & Kontrolle (Ebene 4):**
+- Slider für Personalisierungsgrad und Inhaltsvielfalt  
+- Buttons für „Wiedergabeverlauf löschen“, „Empfehlungsprofil zurücksetzen“ und „Alle Personalisierung deaktivieren“  
 
-**User:**  
-Please change language to German.
-
-**System:**  
-All UI elements were translated into German.
+Alle Texte wurden ins Deutsche übersetzt.
 
 ---
 
 ### Startseite & aktives Video
 
 **User:**  
-Add a prominent active video above recommendations. App name: "Clipfeed".
+Kannst Du mir auf der Startseite noch ein Video einfügen, das gerade aktiv und präsent oben dargestellt wird über "Recommended Videos".  
+Der Name der App lautet "Clipfeed"
 
 **System:**  
-Start screen updated with:
-- Active video ("Jetzt läuft")  
-- Interaction buttons  
-- German navigation  
+Perfekt! Ich habe alle gewünschten Änderungen umgesetzt:
+
+- App-Name: „Clipfeed“  
+- Navigation auf Deutsch  
+- „Empfohlene Videos“ statt „Recommended Videos“  
+
+**Aktives Video:**
+- Prominent oben platziert („Jetzt läuft“)  
+- Play-Button, Interaktionen (Like, Kommentare, Teilen)  
+- Vollständige Metadaten  
 
 ---
 
-### Feedback & Systemreaktion
+### Feedback & Feed-Aktualisierung
 
 **User:**  
-Animate "Feed aktualisieren" and show feedback.
+Können wir den Button „Feed jetzt aktualisieren“ animieren und Feedback anzeigen?
 
 **System:**  
-Implemented:
-- Button animation  
-- Success notification  
-- Feed update logic (video replacement)
+Perfekt! Ich habe implementiert:
+
+- Rotierende Button-Animation  
+- Textänderung („Aktualisiere…“)  
+- Erfolgsnachricht („Feed wurde aktualisiert“)  
+- Austausch von 3 Videos im Feed  
 
 ---
 
-### UX-Optimierung (Feedbackposition)
+### Sprachliche Konsistenz
 
 **User:**  
-Place feedback near the button.
+Trending Inhalte → Trendende Inhalte
 
 **System:**  
-Notification positioned directly below the action button.
+Erledigt – Bezeichnung ist jetzt konsistent.
 
 ---
 
 ### Kontextmenü pro Video
 
 **User:**  
-Add options:
-- Show more / less  
-- Why this video?  
+Kontextmenü mit:
+- häufiger zeigen  
+- seltener zeigen  
+- warum wird mir das angezeigt  
 
 **System:**  
-Context menu implemented with:
-- Toggle behavior  
-- Visual feedback  
-- Link to explanation layer  
+Kontextmenü implementiert mit:
+- exklusiven Auswahloptionen  
+- visuellem Feedback (Haken, grün)  
+- Verlinkung zur Erklärungsebene  
+
+---
+
+### Sichtbarkeit von Feedback
+
+**User:**  
+Ich sehe die Nachricht nicht.
+
+**System:**  
+Toast-Benachrichtigung hinzugefügt (oben sichtbar).
+
+---
+
+**User:**  
+Bitte unten anzeigen
+
+**System:**  
+Toast unten positioniert.
+
+---
+
+**User:**  
+Direkt unter dem Button platzieren
+
+**System:**  
+Erfolgsnachricht wird jetzt direkt unterhalb des Buttons angezeigt.
 
 ---
 
 ## Hinweis
 
-Der dargestellte Promptverlauf wurde zur besseren Lesbarkeit leicht gekürzt und sprachlich geglättet, ohne die inhaltliche Struktur zu verändern. Die vollständige Version ist im begleitenden Repository dokumentiert.
+Der Promptverlauf wurde vollständig übernommen und lediglich strukturiert sowie hinsichtlich Formatierung vereinheitlicht. Inhaltliche Änderungen wurden nicht vorgenommen.
